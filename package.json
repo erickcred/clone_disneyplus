@@ -1,0 +1,27 @@
+{
+  "name": "aulas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erickcred/Git.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erickcred/Git/issues"
+  },
+  "homepage": "https://github.com/erickcred/Git#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "gulp-watch": "^5.0.1",
+    "sass": "^1.58.2"
+  }
+}
