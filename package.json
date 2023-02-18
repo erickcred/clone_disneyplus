@@ -20,6 +20,9 @@
   "homepage": "https://github.com/erickcred/Git#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-html": "^5.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-replace": "^1.1.4",
     "gulp-sass": "^5.1.0",
     "gulp-watch": "^5.0.1",
     "sass": "^1.58.2"
