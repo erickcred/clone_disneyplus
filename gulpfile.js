@@ -30,7 +30,7 @@ function scriptJs() {
         .pipe(gulp.dest("./dist/scripts/"));
 }
 
-exports.default = gulp.parallel([styles, minificaImagem, htmlPro]);
+exports.default = gulp.parallel([styles, minificaImagem, htmlPro, scriptJs]);
 exports.watch = function() {
     gulp.watch("./src/styles/*.scss", gulp.parallel(styles));
     gulp.watch("./src/*.html", gulp.parallel(htmlPro));
