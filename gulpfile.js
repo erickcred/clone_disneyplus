@@ -4,6 +4,7 @@ const sourcemap = require("gulp-sourcemaps");
 const imagemin = require("gulp-imagemin");
 const html = require("gulp-html");
 const uglify = require("gulp-uglify");
+const replace = require("gulp-replace");
 
 function styles() {
     return gulp.src("./src/styles/*.scss")
@@ -21,6 +22,7 @@ function minificaImagem() {
 function htmlPro() {
     return gulp.src("./src/*.html")
         .pipe(html())
+        .pipe(replace("../dist/css/main.css", "css/main.css"))
         .pipe(gulp.dest("./dist/"));
 }
 
