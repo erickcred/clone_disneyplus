@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
     const buttons = document.querySelectorAll(".shows .shows__tabs button[data-tab-button]");
     const questions = document.querySelectorAll("[data-faq-question]");
+    const heroSection = document.querySelector(".hero");
+    const alturaHero = heroSection.clientHeight;
     
+    // Sessão de atrações, programação das abas
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function(button) {
             const abaAlvo = button.target.dataset.tabButton;
@@ -15,8 +18,18 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    // Sessão FAQ acordion
     questions.forEach(function(questionItem) {
         questionItem.addEventListener("click", abreOuFechaResposta)
+    });
+
+    window.addEventListener("scroll", function() {
+        const posisaoAtual = window.scrollY;
+        if (posisaoAtual < alturaHero) {
+            ocultaElementosHeader()
+        } else {
+            exibeElementosHeader()
+        }
     });
 });
 
@@ -39,4 +52,13 @@ function abreOuFechaResposta(elemento) {
     const elementoPai = elemento.target.parentNode;
 
     elementoPai.classList.toggle(classe);
+}
+
+function ocultaElementosHeader() {
+    const header = document.querySelector(".header");
+    header.classList.add("header--is-hidden");
+}
+function exibeElementosHeader() {
+    const header = document.querySelector(".header");
+    header.classList.remove("header--is-hidden");
 }
