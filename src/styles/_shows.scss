@@ -8,6 +8,13 @@
         display: flex;
         justify-content: center;
 
+        @media (max-width: 768px) {
+            white-space: nowrap;
+            overflow-x: scroll;
+            padding-left: 60px;
+            gap: 16px;
+        }
+
         &__button {
             background: none;
             border: none;
@@ -23,6 +30,10 @@
             &--is-active {
                 border-color: variaveis.$corTextoPrincipal;
             }
+            
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
         }
     }
 
@@ -32,6 +43,10 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
         margin-top: 44px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
         &--is-active {
             display: grid;
